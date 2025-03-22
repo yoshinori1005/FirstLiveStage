@@ -1,2 +1,2 @@
 # FirstLiveStage
-First Live Stageの配信用バージョン
+ First Live Stageの配信用バージョン
