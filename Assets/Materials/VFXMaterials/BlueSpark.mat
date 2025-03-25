@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BlueSpark
-  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14,
+    type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -79,7 +80,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 95.87451, g: 95.87451, b: 95.87451, a: 1}
-    - _Color: {r: 36.913746, g: 112.161, b: 271.17407, a: 1}
+    - _Color: {r: 13.050978, g: 39.29288, b: 95.87451, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8878319476865923485
