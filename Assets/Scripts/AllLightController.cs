@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
 
 public class AllLightController : MonoBehaviour
 {
@@ -153,6 +152,7 @@ public class AllLightController : MonoBehaviour
     public void StartBlinking(BlinkType blinkType, LightColor color)
     {
         isBlinking = true;
+        isAllColor = false;
         string typeBlink = GetBlinkType(blinkType, color);
 
         foreach (Animator animator in animators)
