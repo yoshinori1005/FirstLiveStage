@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeartRIng
-  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 0
@@ -110,7 +109,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 3.9533494, g: 3.9533494, b: 3.9533494, a: 1}
+    - _Color: {r: 11.984314, g: 11.984314, b: 11.984314, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _Direction: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

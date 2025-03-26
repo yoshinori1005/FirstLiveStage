@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeartFireworks
-  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 0
@@ -57,7 +56,7 @@ Material:
     - _Opacity: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
+    - _Color: {r: 95.87451, g: 95.87451, b: 95.87451, a: 1}
     - _Direction: {r: 0, g: 0, b: 0, a: 0}
     - _MainColor: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
     - _Scroll: {r: 0, g: 0, b: 0, a: 0}

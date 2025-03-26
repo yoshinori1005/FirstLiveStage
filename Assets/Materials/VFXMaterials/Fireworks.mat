@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fireworks
-  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 16304867fa9e7b043a6d6c1a7f670e14, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4

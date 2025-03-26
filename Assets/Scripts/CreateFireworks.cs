@@ -88,4 +88,13 @@ public class CreateFireworks : MonoBehaviour
     {
         CreateFirework(fwClimaxPrefab);
     }
+
+    // 花火を停止するメソッド
+    public void StopFirework()
+    {
+        if (currentFirework != null)
+        {
+            Destroy(currentFirework);
+        }
+    }
 }
