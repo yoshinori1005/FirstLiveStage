@@ -15,48 +15,65 @@ public class RightLightController : MonoBehaviour
     // 右側基本色メソッド
     public void RightBaseColor()
     {
-        allLightController.SetOtherLightsToBase("Right");
+        if (allLightController.IsBlinkingOrReset())
+        {
+            allLightController.SetOtherLightsToBase("Right");
+        }
+
         SetColor("OnBase");
     }
 
     // 右側赤色メソッド
     public void RightRedColor()
     {
-        allLightController.SetOtherLightsToBase("Right");
+        if (allLightController.IsBlinkingOrReset())
+        {
+            allLightController.SetOtherLightsToBase("Right");
+        }
+
         SetColor("OnRed");
     }
 
     // 右側緑色メソッド
     public void RightGreenColor()
     {
-        allLightController.SetOtherLightsToBase("Right");
+        if (allLightController.IsBlinkingOrReset())
+        {
+            allLightController.SetOtherLightsToBase("Right");
+        }
+
         SetColor("OnGreen");
     }
 
     // 右側青色メソッド
     public void RightBlueColor()
     {
-        allLightController.SetOtherLightsToBase("Right");
+        if (allLightController.IsBlinkingOrReset())
+        {
+            allLightController.SetOtherLightsToBase("Right");
+        }
+
         SetColor("OnBlue");
     }
 
     // 指定した箇所以外の色を基本色にするメソッド
     public void SetBaseColor()
     {
-        StartCoroutine(SetBaseColorWithDelay());
+        SetColor("OnBase");
+        // StartCoroutine(SetBaseColorWithDelay());
     }
 
     // 点滅を終了して基本色にするメソッド
-    IEnumerator SetBaseColorWithDelay()
-    {
-        foreach (Animator animator in animators)
-        {
-            animator.SetTrigger("BaseBlinkOff");
-        }
+    // IEnumerator SetBaseColorWithDelay()
+    // {
+    //     foreach (Animator animator in animators)
+    //     {
+    //         animator.SetTrigger("BaseBlinkOff");
+    //     }
 
-        yield return null;
-        SetColor("OnBase");
-    }
+    //     yield return null;
+    //     SetColor("OnBase");
+    // }
 
     // 色を変更するメソッド
     private void SetColor(string color)

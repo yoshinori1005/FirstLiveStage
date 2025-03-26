@@ -9,6 +9,8 @@ public class AllLightController : MonoBehaviour
 
     Animator[] animators;
     bool isBlinking = false;
+    bool isReset = false;
+    bool isAllColor = false;
 
     public enum LightColor
     {
@@ -26,30 +28,56 @@ public class AllLightController : MonoBehaviour
         rightLights = new List<RightLightController>(FindObjectsOfType<RightLightController>());
         centerLights = new List<CenterLightController>(FindObjectsOfType<CenterLightController>());
         leftLights = new List<LeftLightController>(FindObjectsOfType<LeftLightController>());
+
+        ResetColor();
+    }
+
+    // 初期設定のライト状態にするメソッド
+    public void ResetColor()
+    {
+        isReset = true;
+        isBlinking = false;
+        isAllColor = false;
+
+        foreach (Animator animator in animators)
+        {
+            animator.SetTrigger("OnColorful");
+        }
+    }
+
+    // 現在の状態を判定するメソッド(点滅中またはリセット)
+    public bool IsBlinkingOrReset()
+    {
+        return isBlinking || isReset;
     }
 
     // 指定したライト以外を基本色にするメソッド
     public void SetOtherLightsToBase(string exclude)
     {
-        if (exclude != "Right")
+        if (isAllColor) return;
+
+        if (isBlinking || isReset)
         {
-            foreach (RightLightController light in rightLights)
+            if (exclude != "Right")
             {
-                light.SetBaseColor();
+                foreach (RightLightController light in rightLights)
+                {
+                    light.SetBaseColor();
+                }
             }
-        }
-        if (exclude != "Center")
-        {
-            foreach (CenterLightController light in centerLights)
+            if (exclude != "Center")
             {
-                light.SetBaseColor();
+                foreach (CenterLightController light in centerLights)
+                {
+                    light.SetBaseColor();
+                }
             }
-        }
-        if (exclude != "Left")
-        {
-            foreach (LeftLightController light in leftLights)
+            if (exclude != "Left")
             {
-                light.SetBaseColor();
+                foreach (LeftLightController light in leftLights)
+                {
+                    light.SetBaseColor();
+                }
             }
         }
     }
@@ -82,48 +110,42 @@ public class AllLightController : MonoBehaviour
         }
     }
 
-    // 基本色統一メソッド
-    public void AllBaseColor()
+    // 全箇所を一色にするメソッド
+    public void AllSetColor(LightColor color)
     {
-        string colorName = "On" + GetColorName(LightColor.Base);
+        isBlinking = false;
+        isAllColor = true;
+
+        string colorName = "On" + GetColorName(color);
 
         foreach (Animator animator in animators)
         {
             animator.SetTrigger(colorName);
         }
+    }
+
+    // 基本色統一メソッド
+    public void AllBaseColor()
+    {
+        AllSetColor(LightColor.Base);
     }
 
     // 赤色統一メソッド
     public void AllRedColor()
     {
-        string colorName = "On" + GetColorName(LightColor.Red);
-
-        foreach (Animator animator in animators)
-        {
-            animator.SetTrigger(colorName);
-        }
+        AllSetColor(LightColor.Red);
     }
 
     // 緑色統一メソッド
     public void AllGreenColor()
     {
-        string colorName = "On" + GetColorName(LightColor.Green);
-
-        foreach (Animator animator in animators)
-        {
-            animator.SetTrigger(colorName);
-        }
+        AllSetColor(LightColor.Green);
     }
 
     // 青色統一メソッド
     public void AllBlueColor()
     {
-        string colorName = "On" + GetColorName(LightColor.Blue);
-
-        foreach (Animator animator in animators)
-        {
-            animator.SetTrigger(colorName);
-        }
+        AllSetColor(LightColor.Blue);
     }
 
     // 点滅開始メソッド
@@ -139,24 +161,16 @@ public class AllLightController : MonoBehaviour
     }
 
     // 点滅終了メソッド
-    public void StopBlinking(LightColor color)
+    public void StopBlinking()
     {
-        string colorName = GetColorName(color);
-
         if (isBlinking)
         {
             isBlinking = false;
             foreach (Animator animator in animators)
             {
-                animator.SetTrigger(colorName + "BlinkOff");
+                animator.SetTrigger("OnBase");
             }
         }
-    }
-
-    // 基本色点滅オフメソッド
-    public void BaseBlinkOff()
-    {
-        StopBlinking(LightColor.Base);
     }
 
     // 基本色点滅スローテンポメソッド
@@ -177,12 +191,6 @@ public class AllLightController : MonoBehaviour
         StartBlinking(BlinkType.High, LightColor.Base);
     }
 
-    // 赤色点滅オフメソッド
-    public void RedBlinkOff()
-    {
-        StopBlinking(LightColor.Red);
-    }
-
     // 赤色点滅スローテンポメソッド
     public void RedBlinkLow()
     {
@@ -201,12 +209,6 @@ public class AllLightController : MonoBehaviour
         StartBlinking(BlinkType.High, LightColor.Red);
     }
 
-    // 緑色点滅オフメソッド
-    public void GreenBlinkOff()
-    {
-        StopBlinking(LightColor.Green);
-    }
-
     // 緑色点滅スローテンポメソッド
     public void GreenBlinkLow()
     {
@@ -223,12 +225,6 @@ public class AllLightController : MonoBehaviour
     public void GreenBlinkHigh()
     {
         StartBlinking(BlinkType.High, LightColor.Green);
-    }
-
-    // 青色点滅オフメソッド
-    public void BlueBlinkOff()
-    {
-        StopBlinking(LightColor.Blue);
     }
 
     // 青色点滅スローテンポメソッド
@@ -260,21 +256,5 @@ public class AllLightController : MonoBehaviour
             }
         }
         return false;
-    }
-
-    // 初期設定のライト状態にするメソッド
-    public void ResetColor()
-    {
-        foreach (Animator animator in animators)
-        {
-            if (HasParameter(animator, "OnColorful"))
-            {
-                animator.SetTrigger("OnColorful");
-            }
-            else
-            {
-                animator.SetTrigger("OnBase");
-            }
-        }
     }
 }
