@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class AllLightController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class AllLightController : MonoBehaviour
     List<LeftLightController> leftLights;
 
     Animator[] animators;
+
     bool isBlinking = false;
     bool isReset = false;
     bool isAllColor = false;
@@ -19,15 +21,15 @@ public class AllLightController : MonoBehaviour
 
     public enum BlinkType
     {
-        Off, Low, Mid, High
+        Low, Mid, High
     }
 
     void Start()
     {
-        animators = GetComponentsInChildren<Animator>();
         rightLights = new List<RightLightController>(FindObjectsOfType<RightLightController>());
         centerLights = new List<CenterLightController>(FindObjectsOfType<CenterLightController>());
         leftLights = new List<LeftLightController>(FindObjectsOfType<LeftLightController>());
+        animators = GetComponentsInChildren<Animator>();
 
         ResetColor();
     }
@@ -102,7 +104,6 @@ public class AllLightController : MonoBehaviour
 
         switch (blinkType)
         {
-            case BlinkType.Off: return colorName + "BlinkOff";
             case BlinkType.Low: return colorName + "BlinkLow";
             case BlinkType.Mid: return colorName + "BlinkMid";
             case BlinkType.High: return colorName + "BlinkHigh";
@@ -243,18 +244,5 @@ public class AllLightController : MonoBehaviour
     public void BlueBlinkHigh()
     {
         StartBlinking(BlinkType.High, LightColor.Blue);
-    }
-
-    // 特定のトリガーが存在するか確認するメソッド
-    private bool HasParameter(Animator animator, string paramName)
-    {
-        foreach (AnimatorControllerParameter param in animator.parameters)
-        {
-            if (param.name == paramName)
-            {
-                return true;
-            }
-        }
-        return false;
     }
 }
