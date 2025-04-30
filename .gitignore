@@ -79,3 +79,6 @@ crashlytics-build.properties
 # Ignore TestCharacter folder inside Resources
 Assets/Resources/TestCharacter/
 Assets/Resources/TestCharacter.meta
+
+Assets/AssetStore/
+Assets/AssetStore.meta/
