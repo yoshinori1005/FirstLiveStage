@@ -92,7 +92,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 23.968628, g: 20.078432, b: 7.9058824, a: 1}
+    - _BaseColor: {r: 47.937256, g: 40.156864, b: 15.811765, a: 1}
     - _Color: {r: 47.937256, g: 38.901962, b: 17.568628, a: 1}
     - _EmissionColor: {r: 63.396225, g: 49.79594, b: 19.437523, a: 1}
     - _Outline1: {r: 1, g: 1, b: 1, a: 1}

@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18263854, g: 0.22834885, b: 0.30714613, a: 1}
+  m_IndirectSpecularColor: {r: 0.015339273, g: 0.0124644805, b: 0.040728103, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -446,6 +446,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &28833074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +583,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: ResetColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorWhite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1008,6 +1032,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &96091458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1338,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorWhite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &122404116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,7 +1618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &154220970
 Transform:
   m_ObjectHideFlags: 0
@@ -1598,7 +1646,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
@@ -1637,7 +1685,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4068,6 +4116,7 @@ Transform:
   - {fileID: 1502041477}
   - {fileID: 355837761}
   - {fileID: 2111705828}
+  - {fileID: 731536184}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4167,6 +4216,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &622402976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4211,7 +4272,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-636338
+  m_Name: pb_Mesh-41652
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4545,6 +4606,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &688576607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4797,6 +4870,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705087125}
   m_CullTransparentMesh: 1
+--- !u!1001 &731536182
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 589365467}
+    m_Modifications:
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563548634795179270, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_Name
+      value: LightManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563548634795179270, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+--- !u!114 &731536183 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7931843579466112572, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+  m_PrefabInstance: {fileID: 731536182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8a1855071a6c46b237afd9e70d5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &731536184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1536524233689062100, guid: b39d4b2f6336af2408d117f5b9e32321, type: 3}
+  m_PrefabInstance: {fileID: 731536182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &738002085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6249,6 +6399,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &869533863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6611,7 +6773,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-636382
+  m_Name: pb_Mesh-41696
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6865,6 +7027,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorGreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &975367569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7079,6 +7253,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorWhite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &992539954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7204,6 +7390,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: RedBlinkLow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorRed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7349,6 +7547,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: RedBlinkMid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorRed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8388,6 +8598,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorWhite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1196228674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8776,7 +8998,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-636360
+  m_Name: pb_Mesh-41674
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9155,6 +9377,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: GreenBlinkMid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorGreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9885,7 +10119,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-636316
+  m_Name: pb_Mesh-41630
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10596,6 +10830,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: BaseBlinkLow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorWhite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11365,6 +11611,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorGreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1759695058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11704,6 +11962,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: AllGreenColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorGreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16775,6 +17045,18 @@ MonoBehaviour:
       - m_Target: {fileID: 912025353}
         m_TargetAssemblyTypeName: AllLightController, Assembly-CSharp
         m_MethodName: AllBlueColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731536183}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: SetLightColorBlue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -22,14 +22,14 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Intensity: 3.32
-    - _Length: 1.09
-    - _NoiseIntensity: 0.192
+    - _Intensity: 5
+    - _Length: 1.35
+    - _NoiseIntensity: 0.291
     - _NoiseScale: 15
     - _PulseSpeed: 0
-    - _TipFade: 0.529
-    - _Width: 2.16
+    - _TipFade: 0.559
+    - _Width: 1.2
     m_Colors:
-    - _Color: {r: 0.86125356, g: 1, b: 0.19215682, a: 0.53333336}
+    - _Color: {r: 0.96847904, g: 1, b: 0.19215685, a: 0.28235295}
     - _NoiseSpeed: {r: 0.5, g: -0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
